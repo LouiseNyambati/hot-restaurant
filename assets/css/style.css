@@ -18,3 +18,11 @@ form {
 .align-left {
 	text-align: left;
 }
+
+.align-right {
+	text-align: right;
+}
+
+.panel-margin {
+	margin: 0 15px;
+}
