@@ -50,7 +50,7 @@ app.get("/api/table", function(req,res){
 
 
 
-    
+
 
   });
 })
@@ -66,3 +66,20 @@ app.get("/", function (req,res){
   app.get("/tables", function (req,res){
     res.sendFile(path.join(__dirname, "tables.html"))
   })
+
+
+  $(".submit").on("click", function() {
+
+   connection.query("INSERT INTO reservations WHERE id ?", [>5]function (err,res){
+
+        name: $("#name").val().trim(),
+        phone_number: $("#phone_number").val().trim(),
+        email: $("#email").val().trim(),
+        unique_id: $("#unique_id").val().trim()
+      }, function(err){
+        if(err) throw err;
+        console.log ("It worked");
+      }
+
+    
+  });
