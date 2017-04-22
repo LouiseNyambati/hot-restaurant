@@ -3,6 +3,7 @@ var express = require("express");
 var url = require("url");
 var http = require("http");
 var path = require("path");
+var bodyParser = require("body-parser")
 
 var app = express();
 var PORT = 3000;
@@ -35,18 +36,21 @@ app.listen(PORT, function(){
 // }
 app.get("/api/table", function(req,res){
   connection.query("SELECT * FROM waiting_list", function (err,res){
-    res.json
-  }
-}
+    for (var i = 0; i < res.length; i++){
+      return res.json(res[i]);
+    }
+
+  });
+})
 
 app.get("/", function (req,res){
     res.sendFile(path.join(__dirname, index.html))
-  }
+  })
 
   app.get("/reserve", function (req,res){
     res.sendFile(path.join(__dirname, reserve.html))
-  }
+  })
 
   app.get("/table", function (req,res){
     res.sendFile(path.join(__dirname, table.html))
-  }
+  })
