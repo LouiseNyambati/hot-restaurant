@@ -44,13 +44,15 @@ app.get("/api/table", function(req,res){
 })
 
 app.get("/", function (req,res){
-    res.sendFile(path.join(__dirname, index.html))
+    res.sendFile(path.join(__dirname, "index.html"))
   })
 
   app.get("/reserve", function (req,res){
-    res.sendFile(path.join(__dirname, reserve.html))
+    res.sendFile(path.join(__dirname, "reserve.html"))
   })
 
-  app.get("/table", function (req,res){
-    res.sendFile(path.join(__dirname, table.html))
+  app.get("/tables", function (req,res){
+    res.sendFile(path.join(__dirname, "table.html"))
   })
+
+  
