@@ -1,0 +1,22 @@
+CREATE DATABASE restaurant;
+
+USE restaurant;
+
+CREATE TABLE reservations (
+id INTEGER(11) AUTO_INCREMENT NOT NULL,
+name VARCHAR (50) NOT NULL,
+phone_number INTEGER (50) NOT NULL,
+email VARCHAR (50) NOT NULL,
+unique_id INTEGER (50) NOT NULL,
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE waiting_list (
+id INTEGER(11) AUTO_INCREMENT NOT NULL,
+name VARCHAR (50) NOT NULL,
+phone_number INTEGER (50) NOT NULL,
+email VARCHAR (50) NOT NULL,
+unique_id INTEGER (50) NOT NULL,
+PRIMARY KEY (id)
+);
