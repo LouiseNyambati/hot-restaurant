@@ -7,6 +7,11 @@ var path = require("path");
 var app = express();
 var PORT = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
 var connection = mysql.createConnection({
     host: "localhost",
     port: "3306",
@@ -29,7 +34,9 @@ app.listen(PORT, function(){
 
 // }
 app.get("/api/table", function(req,res){
-  connection.query("SELECT * FROM waiting_list")
+  connection.query("SELECT * FROM waiting_list", function (err,res){
+    res.json
+  }
 }
 
 app.get("/", function (req,res){
