@@ -21,7 +21,7 @@ connection.connect(function(err) {
 });
 var server = http.createServer();
 
-server.listen(PORT, function(){
+app.listen(PORT, function(){
   console.log("Server is listening on: http://localhost:%s" , PORT);
 });
 
